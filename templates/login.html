@@ -1,0 +1,45 @@
+       
+      
+       {% load staticfiles %}
+       <center>
+     <html>  
+     <head>
+      <body>
+        <form action="{% url 'polls:login' %}" method="post" novalidate>
+        {% csrf_token %}
+      <link rel="stylesheet" href="{% static 'two.css' %}"></head>
+     </head> 
+        <div id="login">  
+        <div>{{field}}</div> 
+          <h1>Welcome Back!</h1>
+          
+          
+          
+            <div class="field-wrap">
+            <label>
+              Email Address:
+            </label>
+             <input type="email" id="email"name="email" value=""required autocomplete="off"/>
+          </div><span class="req" id="email_errormessage"></span><br><br>
+          
+          <div class="field-wrap" >
+            <label>
+              Password:
+            </label>
+           <input type="password" id="password" name="password" required autocomplete="off"><br><span class="pass" id="password_errormessage"></span>
+
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+          <input type="submit" id="button" value="login">
+          
+          
+          
+          </form>
+          <script type="text/javascript" src="{% static 'Js/jquery.min.js' %}"></script>
+          <script type="text/javascript" src="{% static 'Js/login.js' %}"></script>
+        </body>
+      </html>
+      </center>
+
